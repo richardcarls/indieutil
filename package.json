@@ -1,0 +1,56 @@
+{
+  "name": "indieutil",
+  "version": "0.1.0",
+  "description": "Universal JavaScript utility library for the IndieWeb.",
+  "keywords": [
+    "IndieWeb",
+    "fetch",
+    "Microformats",
+    "mf2",
+    "structured data",
+    "scraper"
+  ],
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "main": "dist/indieutil.js",
+  "module": "dist/indieutil.mjs",
+  "jsnext:main": "dist/indieutil.mjs",
+  "scripts": {
+    "prebuild": "eslint lib test",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardcarls/indieutil.git"
+  },
+  "bugs": {
+    "url": "https://github.com/richardcarls/indieutil/issues"
+  },
+  "homepage": "https://github.com/richardcarls/indieutil#readme",
+  "author": {
+    "name": "Richard Carls",
+    "email": "richard.j.carls@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^3.12.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "rollup": "^0.39.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-watch": "^3.1.0"
+  }
+}
