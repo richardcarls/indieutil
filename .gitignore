@@ -36,8 +36,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Projectile project
+# Editor files
 .projectile
+.dir-locals.el
 
 # Distributed
 dist
