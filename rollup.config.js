@@ -1,30 +1,33 @@
-import babel from 'rollup-plugin-babel'
-import babelrc from 'babelrc-rollup'
-import istanbul from 'rollup-plugin-istanbul'
+import { readFileSync } from 'fs'
 
-import { name, main, module, dependencies } from './package.json'
+import buble from 'rollup-plugin-buble'
+import globals from 'rollup-plugin-node-globals'
+import node from 'rollup-plugin-node-resolve'
+import json from 'rollup-plugin-json'
+
+// TODO: Why not just use require() here? Preference?
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'))
 
 export default {
   entry: 'lib/index.js',
   plugins: [
-    babel(babelrc()),
-    istanbul({
-      exclude: [
-        'test/**/*',
-        'node_modules/**/*'
-      ]
+    json(),
+    buble(),
+    globals(),
+    node({
+      browser: true
     })
   ],
-  external: Object.keys(dependencies),
+  external: Object.keys(pkg.dependencies),
   targets: [
     {
-      dest: main,
+      dest: pkg.main,
       format: 'umd',
-      moduleName: name,
+      moduleName: pkg.name,
       sourceMap: true
     },
     {
-      dest: module,
+      dest: pkg.module,
       format: 'es',
       sourceMap: true
     }
