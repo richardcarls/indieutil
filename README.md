@@ -1,7 +1,9 @@
 ## Notice: This module is pre-release and very much a work-in-progress
 
 # indieutil
-[![Build Status](https://travis-ci.org/richardcarls/indieutil.svg?branch=master)](https://travis-ci.org/richardcarls/indieutil)[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/richardcarls/indieutil.svg?branch=develop)](https://travis-ci.org/richardcarls/indieutil)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### Universal JavaScript utility library for the IndieWeb.
 
